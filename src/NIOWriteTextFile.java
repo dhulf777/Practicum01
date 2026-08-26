@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Demonstrates how to use Java NIO, a thread safe File IO library
  * to write a text file
  */
-public class NIOWriteTextFile 
+public class  NIOWriteTextFile
 {
 
     /**
