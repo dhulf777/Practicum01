@@ -56,8 +56,14 @@ public class ProductReader
                 {
                     rec = reader.readLine();
                     // echo to screen
-                    String[] fields = rec.split(","); // added for fields
-                    System.out.printf("%-8s %-12s %-28s %-8s%n", fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim());
+                    if (rec.trim().length() > 0)
+                    {
+                        String[] fields = rec.split(","); // added for fields
+                        if (fields.length >= 4)
+                        {
+                            System.out.printf("%-8s %-12s %-28s %-8s%n", fields[0].trim(), fields[1].trim(), fields[2].trim(), fields[3].trim());
+                        }
+                    }
                 }
                 reader.close(); // must close the file to seal it and flush buffer
                 System.out.println("\n\nData file read!");
